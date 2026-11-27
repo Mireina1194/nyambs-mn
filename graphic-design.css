@@ -1,0 +1,1341 @@
+/* =========================================
+   GRAPHIC DESIGN PAGE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: #ffffff;
+    --main-color: #00eeff;
+    --text-light: #bdbdbd;
+    --main-color:  #00eeff;
+    --main-light: #00eeff;
+
+    --border-color: rgba(255, 255, 255, 0.08);
+
+    --blue-glow: rgba(22, 130, 168, 0.18);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   GLOBAL SECTION
+========================================= */
+
+section {
+    padding: 11rem 9% 9rem;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 2rem 9%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(8, 8, 8, 0.88);
+
+    border-bottom: 1px solid var(--border-color);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 2.7rem;
+
+    font-weight: 700;
+
+    color: var(--text-color);
+
+    letter-spacing: -0.05rem;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+
+    align-items: center;
+
+    gap: 3rem;
+}
+
+.navbar a {
+    position: relative;
+
+    color: #ffffff;
+
+    font-size: 1.5rem;
+
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.navbar a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -0.7rem;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--main-color);
+
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.graphic-hero {
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    padding-top: 13rem;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(22, 130, 168, 0.16),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(22, 130, 168, 0.06),
+            transparent 30%
+        ),
+
+        var(--bg-color);
+}
+
+
+/* SUBTLE BACKGROUND ELEMENT */
+
+.graphic-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    right: -180px;
+    bottom: -200px;
+
+    border: 1px solid rgba(22, 130, 168, 0.12);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 80px rgba(22, 130, 168, 0.06);
+
+    pointer-events: none;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 980px;
+}
+
+
+/* SECTION TAG */
+
+.section-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    color: var(--main-light);
+
+    font-size: 1.4rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.25rem;
+
+    margin-bottom: 2.5rem;
+
+    text-transform: uppercase;
+}
+
+.section-tag ion-icon {
+    font-size: 2.2rem;
+}
+
+
+/* HERO HEADING */
+
+.hero-content h1 {
+
+    max-width: 1000px;
+
+    font-size: clamp(4.8rem, 8vw, 8.5rem);
+
+    line-height: 1.02;
+
+    letter-spacing: -0.05em;
+
+    font-weight: 800;
+
+    margin-bottom: 3rem;
+}
+
+.hero-content h1 span {
+
+    display: block;
+
+    color: var(--main-color);
+
+    text-shadow:
+        0 0 35px rgba(22, 130, 168, 0.12);
+}
+
+
+/* HERO DESCRIPTION */
+
+.hero-content p {
+
+    max-width: 760px;
+
+    color: var(--text-light);
+
+    font-size: 1.8rem;
+
+    line-height: 1.9;
+
+    margin-bottom: 4rem;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 1.5rem;
+
+    flex-wrap: wrap;
+}
+
+.cta-button,
+.secondary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+
+    min-height: 5.5rem;
+
+    padding: 1.5rem 2.8rem;
+
+    border-radius: 0.6rem;
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+    transition: 0.35s ease;
+
+    cursor: pointer;
+}
+
+
+/* PRIMARY */
+
+.cta-button {
+
+    color: #031014;
+
+    background: var(--main-color);
+
+    box-shadow:
+        0 0 25px rgba(22, 130, 168, 0.18);
+}
+
+.cta-button:hover {
+
+    transform: translateY(-4px);
+
+    background: var(--main-light);
+
+    box-shadow:
+        0 0 35px rgba(22, 130, 168, 0.35);
+}
+
+
+/* SECONDARY */
+
+.secondary-button {
+
+    color: var(--text-color);
+
+    background: rgba(255, 255, 255, 0.02);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.secondary-button:hover {
+
+    color: #ffffff;
+
+    border-color: var(--main-color);
+
+    background: rgba(22, 130, 168, 0.08);
+
+    transform: translateY(-4px);
+}
+
+.cta-button ion-icon,
+.secondary-button ion-icon {
+
+    font-size: 2rem;
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.section-heading {
+
+    max-width: 900px;
+
+    margin-bottom: 5rem;
+}
+
+.section-heading.center {
+
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-heading > span {
+
+    display: block;
+
+    color: var(--main-color);
+
+    font-size: 1.3rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.25rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.section-heading h2 {
+
+    font-size: clamp(3.5rem, 6vw, 5.8rem);
+
+    line-height: 1.08;
+
+    letter-spacing: -0.035em;
+
+    margin-bottom: 2rem;
+}
+
+.section-heading h2 span {
+
+    color: var(--main-color);
+}
+
+.section-heading p {
+
+    color: var(--text-light);
+
+    font-size: 1.6rem;
+
+    line-height: 1.9;
+
+    max-width: 760px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   DESIGN INTRO
+========================================= */
+
+.design-intro {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(22, 130, 168, 0.04),
+            transparent 50%
+        ),
+
+        var(--second-bg-color);
+}
+
+.intro-content {
+
+    max-width: 950px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 5rem;
+
+    margin-top: 2rem;
+}
+
+.intro-content p {
+
+    color: var(--text-light);
+
+    font-size: 1.7rem;
+
+    line-height: 1.9;
+}
+
+.intro-content p:first-child {
+
+    color: #ffffff;
+
+    font-size: 2rem;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   WHAT I OFFER
+========================================= */
+
+.design-services {
+
+    background: var(--bg-color);
+}
+
+
+/* SERVICE GRID */
+
+.service-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1.8rem;
+}
+
+
+/* SERVICE CARD */
+
+.design-card {
+
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 3.2rem 2.8rem;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.01)
+        );
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 1.4rem;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* BLUE LIGHT */
+
+.design-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -100px;
+    right: -100px;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(22, 130, 168, 0.08);
+
+    filter: blur(35px);
+
+    transition: 0.4s ease;
+}
+
+
+/* HOVER */
+
+.design-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: rgba(22, 130, 168, 0.55);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(22, 130, 168, 0.08);
+}
+
+.design-card:hover::before {
+
+    background: rgba(22, 130, 168, 0.15);
+}
+
+
+/* ICON */
+
+.icon-box {
+
+    position: relative;
+
+    width: 5.8rem;
+    height: 5.8rem;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 2.5rem;
+
+    background: rgba(22, 130, 168, 0.08);
+
+    border: 1px solid rgba(22, 130, 168, 0.25);
+
+    border-radius: 1rem;
+}
+
+.icon-box ion-icon {
+
+    color: var(--main-light);
+
+    font-size: 2.8rem;
+}
+
+
+/* NUMBER */
+
+.service-number {
+
+    position: absolute;
+
+    top: 2.8rem;
+    right: 2.8rem;
+
+    color: rgba(255, 255, 255, 0.12);
+
+    font-size: 2.4rem;
+
+    font-weight: 800;
+}
+
+
+/* SERVICE TITLE */
+
+.design-card h3 {
+
+    position: relative;
+
+    font-size: 2rem;
+
+    line-height: 1.25;
+
+    margin-bottom: 1.5rem;
+}
+
+
+/* SERVICE DESCRIPTION */
+
+.design-card p {
+
+    position: relative;
+
+    color: var(--text-light);
+
+    font-size: 1.45rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 2rem;
+}
+
+
+/* SERVICE LIST */
+
+.service-list {
+
+    position: absolute;
+
+    left: 2.8rem;
+    right: 2.8rem;
+    bottom: 2.8rem;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.7rem;
+}
+
+.service-list span {
+
+    padding: 0.55rem 0.9rem;
+
+    color: var(--main-light);
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    border: 1px solid rgba(22, 130, 168, 0.25);
+
+    border-radius: 2rem;
+
+    background: rgba(22, 130, 168, 0.04);
+}
+
+
+/* =========================================
+   WHY DESIGN MATTERS
+========================================= */
+
+.design-process {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            var(--second-bg-color),
+            var(--bg-color)
+        );
+}
+
+
+/* PROCESS GRID */
+
+.process-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1.8rem;
+}
+
+
+/* PROCESS CARD */
+
+.process-card {
+
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 3rem 2.7rem;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 1.4rem;
+
+    transition: 0.35s ease;
+}
+
+.process-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: rgba(22, 130, 168, 0.45);
+}
+
+
+/* NUMBER */
+
+.process-number {
+
+    position: absolute;
+
+    top: 2rem;
+    right: 2rem;
+
+    color: rgba(22, 130, 168, 0.18);
+
+    font-size: 3.2rem;
+
+    font-weight: 800;
+}
+
+
+/* ICON */
+
+.process-icon {
+
+    width: 5.5rem;
+    height: 5.5rem;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 2.5rem;
+
+    border-radius: 50%;
+
+    background: rgba(22, 130, 168, 0.08);
+
+    border: 1px solid rgba(22, 130, 168, 0.18);
+}
+
+.process-icon ion-icon {
+
+    color: var(--main-color);
+
+    font-size: 2.6rem;
+}
+
+
+/* TITLE */
+
+.process-card h3 {
+
+    font-size: 2rem;
+
+    margin-bottom: 1.2rem;
+}
+
+
+/* TEXT */
+
+.process-card p {
+
+    color: var(--text-light);
+
+    font-size: 1.45rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   DESIGN PRINCIPLES
+========================================= */
+
+.design-principles {
+
+    background: var(--second-bg-color);
+}
+
+
+/* PRINCIPLES GRID */
+
+.principles-list {
+
+    max-width: 1050px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1.8rem;
+
+    margin: 0 auto;
+}
+
+
+/* PRINCIPLE */
+
+.principle {
+
+    display: flex;
+
+    gap: 2rem;
+
+    padding: 2.8rem;
+
+    background: rgba(8, 8, 8, 0.65);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 1.3rem;
+
+    transition: 0.35s ease;
+}
+
+.principle:hover {
+
+    transform: translateY(-5px);
+
+    border-color: rgba(22, 130, 168, 0.45);
+}
+
+
+/* ICON */
+
+.principle > ion-icon {
+
+    flex-shrink: 0;
+
+    color: var(--main-color);
+
+    font-size: 3.3rem;
+
+    margin-top: 0.2rem;
+}
+
+
+/* TITLE */
+
+.principle h3 {
+
+    font-size: 1.9rem;
+
+    margin-bottom: 0.8rem;
+}
+
+
+/* TEXT */
+
+.principle p {
+
+    color: var(--text-light);
+
+    font-size: 1.45rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.design-cta {
+
+    position: relative;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(22, 130, 168, 0.15),
+            transparent 52%
+        ),
+
+        var(--bg-color);
+}
+
+
+/* CTA DECORATION */
+
+.design-cta::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(22, 130, 168, 0.08);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* CTA CONTENT */
+
+.cta-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+.cta-content > span {
+
+    color: var(--main-color);
+
+    font-size: 1.3rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.25rem;
+}
+
+.cta-content h2 {
+
+    font-size: clamp(3.8rem, 6vw, 6rem);
+
+    line-height: 1.08;
+
+    letter-spacing: -0.035em;
+
+    margin: 1.7rem 0 2rem;
+}
+
+.cta-content h2 span {
+
+    color: var(--main-color);
+}
+
+.cta-content p {
+
+    max-width: 700px;
+
+    color: var(--text-light);
+
+    font-size: 1.7rem;
+
+    line-height: 1.9;
+
+    margin: 0 auto 3.5rem;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    background: #070707;
+
+    border-top: 1px solid var(--border-color);
+}
+
+
+/* FOOTER CONTENT */
+
+.footer-content {
+
+    padding: 5rem 9%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 3rem;
+}
+
+
+/* FOOTER BRAND */
+
+.footer-brand p {
+
+    color: var(--text-light);
+
+    font-size: 1.4rem;
+
+    margin-top: 1rem;
+}
+
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.footer-social {
+
+    display: flex;
+
+    gap: 1.2rem;
+}
+
+.footer-social a {
+
+    width: 4.4rem;
+    height: 4.4rem;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--main-color);
+
+    border: 1px solid rgba(22, 130, 168, 0.3);
+
+    border-radius: 50%;
+
+    font-size: 2rem;
+
+    transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+
+    color: #000000;
+
+    background: var(--main-color);
+
+    border-color: var(--main-color);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 20px rgba(22, 130, 168, 0.4);
+}
+
+.footer-social ion-icon {
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+
+    padding: 2rem 9%;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-bottom p {
+
+    color: #666;
+
+    font-size: 1.3rem;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    section {
+
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .header {
+
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .footer-content {
+
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .service-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    html {
+
+        font-size: 55%;
+    }
+
+    .header {
+
+        padding: 1.8rem 5%;
+    }
+
+    .navbar {
+
+        gap: 1.5rem;
+    }
+
+    .navbar a {
+
+        font-size: 1.3rem;
+    }
+
+    section {
+
+        padding: 8rem 5% 7rem;
+    }
+
+    .graphic-hero {
+
+        min-height: 90vh;
+
+        padding-top: 11rem;
+    }
+
+    .hero-content h1 {
+
+        font-size: 5.2rem;
+    }
+
+    .hero-content p {
+
+        font-size: 1.6rem;
+    }
+
+    .intro-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+    }
+
+    .service-grid,
+    .process-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .principles-list {
+
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    html {
+
+        font-size: 50%;
+    }
+
+    .navbar {
+
+        gap: 0.9rem;
+    }
+
+    .navbar a {
+
+        font-size: 1.15rem;
+    }
+
+    .graphic-hero {
+
+        min-height: 85vh;
+    }
+
+    .hero-content h1 {
+
+        font-size: 4.2rem;
+    }
+
+    .hero-content p {
+
+        font-size: 1.5rem;
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .cta-button,
+    .secondary-button {
+
+        width: 100%;
+    }
+
+    .section-heading h2 {
+
+        font-size: 3.7rem;
+    }
+
+    .section-heading p {
+
+        font-size: 1.5rem;
+    }
+
+    .service-grid,
+    .process-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .design-card {
+
+        min-height: 360px;
+
+        padding: 2.8rem 2.3rem;
+    }
+
+    .service-list {
+
+        left: 2.3rem;
+        right: 2.3rem;
+        bottom: 2.3rem;
+    }
+
+    .process-card {
+
+        min-height: 280px;
+    }
+
+    .principle {
+
+        flex-direction: column;
+
+        gap: 1.2rem;
+    }
+
+    .cta-content h2 {
+
+        font-size: 3.8rem;
+    }
+
+    .footer-content {
+
+        padding: 4rem 5%;
+    }
+}
